@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>送给何苏桓的专属记忆 ❤️</title>
+    <style>
+        /* --- 基础样式变量 --- */
+        :root {
+            --primary-pink: #ffafbd;
+            --soft-pink: #ffc3a0;
+            --text-color: #5a4a4a;
+            --glass-bg: rgba(255, 255, 255, 0.85);
+        }
+
+        body, html {
+            margin: 0; padding: 0; width: 100%; height: 100%;
+            font-family: "Microsoft YaHei", "STKaiti", serif;
+            background: #fdf5f5;
+            overflow-x: hidden;
+            scroll-behavior: smooth;
+        }
+
+        /* --- 第一阶段：唯美文字开场 --- */
+        #stage1 {
+            position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+            display: flex; justify-content: center; align-items: center;
+            background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('Figure1.jpg');
+            background-size: cover; background-position: center;
+            z-index: 100; transition: opacity 1.5s ease;
+        }
+
+        .glass-card {
+            background: var(--glass-bg);
+            backdrop-filter: blur(12px);
+            padding: 40px; border-radius: 30px;
+            max-width: 85%; width: 500px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.2);
+            text-align: center; border: 1px solid rgba(255,255,255,0.4);
+        }
+
+        #main-title { color: #d63384; margin-bottom: 25px; font-size: 1.6rem; }
+        
+        .typing-text {
+            font-size: 1.15rem; color: var(--text-color);
+            line-height: 1.8; min-height: 120px; margin-bottom: 25px;
+            text-align: left; position: relative;
+        }
+
+        .action-btn {
+            background: linear-gradient(45deg, #ff758c, #ff7eb3);
+            color: white; border: none; padding: 14px 40px;
+            border-radius: 50px; cursor: pointer; font-size: 1rem;
+            transition: all 0.3s ease;
+            box-shadow: 0 8px 20px rgba(255, 117, 140, 0.4);
+        }
+        .action-btn:hover { transform: translateY(-3px); box-shadow: 0 12px 25px rgba(255, 117, 140, 0.5); }
+
+        /* --- 第二阶段：手账风照片墙 --- */
+        #stage2 {
+            display: none; min-height: 100vh;
+            background: #f7e8df url('https://www.transparenttextures.com/patterns/felt.png');
+            padding: 80px 20px;
+        }
+
+        .gallery-header { text-align: center; margin-bottom: 60px; }
+        .gallery-header h1 { font-family: "STKaiti"; color: #8e735b; font-size: 2.5rem; margin-bottom: 10px; }
+        .gallery-header p { color: #a68b75; font-size: 1.1rem; }
+
+        .photo-container {
+            position: relative; max-width: 1200px; margin: 0 auto;
+            display: flex; flex-wrap: wrap; justify-content: center; gap: 40px;
+        }
+
+        .polaroid {
+            background: white; padding: 12px 12px 45px 12px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+            transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            cursor: pointer; position: relative; width: 250px;
+        }
+
+        .polaroid::before {
+            content: ""; position: absolute; top: -15px; left: 50%;
+            transform: translateX(-50%) rotate(-3deg);
+            width: 90px; height: 30px;
+            background: rgba(255, 255, 255, 0.4);
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+            backdrop-filter: blur(2px); z-index: 2; border: 1px solid rgba(255,255,255,0.2);
+        }
+
+        .polaroid img { width: 100%; height: 320px; object-fit: cover; border: 1px solid #f0f0f0; }
+        .polaroid span {
+            display: block; text-align: center; margin-top: 18px;
+            font-family: "STKaiti"; font-size: 1.2rem; color: #777;
+        }
+
+        .polaroid:hover {
+            transform: scale(1.1) rotate(0deg) !important;
+            z-index: 50; box-shadow: 0 20px 45px rgba(0,0,0,0.3);
+        }
+
+        /* --- 背景音乐控制按钮 --- */
+        #music-btn {
+            position: fixed; top: 25px; right: 25px; z-index: 1000;
+            width: 45px; height: 45px; background: rgba(255,255,255,0.6);
+            border-radius: 50%; display: flex; justify-content: center;
+            align-items: center; cursor: pointer; border: 2px solid white;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1); font-size: 20px;
+        }
+        .rotating { animation: musicRotate 4s linear infinite; }
+        @keyframes musicRotate { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }
+
+        /* --- 结尾区域按钮样式 --- */
+        .final-message {
+            text-align: center; margin-top: 100px; padding: 80px 20px;
+            background: rgba(255,255,255,0.4); border-radius: 60px;
+        }
+        .final-message h2 { color: #d63384; font-size: 2.2rem; margin-bottom: 30px; }
+        
+        .answer-box {
+            display: flex; justify-content: center; gap: 30px; align-items: center;
+        }
+        .ans-btn {
+            padding: 15px 45px; border-radius: 50px; border: none; cursor: pointer;
+            font-size: 1.2rem; transition: all 0.3s; font-family: "STKaiti";
+        }
+        #yes-btn { background: #ff758c; color: white; box-shadow: 0 5px 15px rgba(255,117,140,0.4); }
+        #no-btn { background: #eee; color: #999; }
+
+        /* --- 弹窗结果层 --- */
+        #result-mask {
+            position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+            background: rgba(0,0,0,0.85); z-index: 3000;
+            display: none; flex-direction: column; justify-content: center; align-items: center;
+            color: white; text-align: center;
+        }
+        #result-mask h1 { font-size: 3rem; margin-top: 20px; font-family: "STKaiti"; }
+        .result-emoji { font-size: 80px; }
+        .close-result { margin-top: 30px; color: #ccc; cursor: pointer; text-decoration: underline; }
+
+        /* --- 图片放大层 --- */
+        #lightbox {
+            position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+            background: rgba(0,0,0,0.92); z-index: 2000;
+            display: none; justify-content: center; align-items: center;
+        }
+        #lightbox img { max-width: 95%; max-height: 90%; border: 6px solid white; border-radius: 5px; }
+
+        /* --- 飘落动效 --- */
+        .petal {
+            position: fixed; top: -10%; z-index: 500; pointer-events: none;
+            animation: fall linear forwards;
+        }
+        @keyframes fall {
+            to { transform: translateY(110vh) translateX(120px) rotate(720deg); opacity: 0; }
+        }
+    </style>
+</head>
+<body>
+
+<audio id="bgm" loop><source src="bgm.mp3" type="audio/mpeg"></audio>
+<div id="music-btn" onclick="toggleMusic(event)">🎵</div>
+
+<div id="stage1">
+    <div class="glass-card">
+        <h1 id="main-title">何苏桓，我有话想对你说...</h1>
+        <div id="typewriter" class="typing-text"></div>
+        <button class="action-btn" id="nextBtn" onclick="handleFlow()">点击开启我们的故事</button>
+    </div>
+</div>
+
+<div id="stage2">
+    <div class="gallery-header">
+        <h1>专属记忆册 ❤️</h1>
+        <p>每一页手账，都藏着我想对你说的话</p>
+    </div>
+    
+    <div class="photo-container">
+        <div class="polaroid" onclick="zoomImg(this)"><img src="Figure8.jpg"><span>心动的话语</span></div>
+        <div class="polaroid" onclick="zoomImg(this)"><img src="Figure9.jpg"><span>完美配合！</span></div>
+        <div class="polaroid" onclick="zoomImg(this)"><img src="Figure10.jpg"><span>等我</span></div>
+        <div class="polaroid" onclick="zoomImg(this)"><img src="Figure11.jpg"><span>五排连胜战绩</span></div>
+        <div class="polaroid" onclick="zoomImg(this)"><img src="Figure12.jpg"><span>你居然想听我的真实声音</span></div>
+        <div class="polaroid" onclick="zoomImg(this)"><img src="Figure13.jpg"><span>我们的单挑</span></div>
+        <div class="polaroid" onclick="zoomImg(this)"><img src="Figure14.jpg"><span>开心❤️</span></div>
+        <div class="polaroid" onclick="zoomImg(this)"><img src="Figure15.jpg"><span>初识五排</span></div>
+        <div class="polaroid" onclick="zoomImg(this)"><img src="Figure16.jpg"><span>喜欢你是我的秘密</span></div>
+        <div class="polaroid" onclick="zoomImg(this)"><img src="Figure17.jpg"><span>林星佑 ❤️ 何苏桓</span></div>
+    </div>
+
+    <div class="final-message">
+        <h2 id="final-question">何苏桓，你愿意做我的男朋友吗？</h2>
+        <div class="answer-box">
+            <button class="ans-btn" id="yes-btn" onclick="showAccept()">我愿意 ❤️</button>
+            <button class="ans-btn" id="no-btn" onclick="showReject()">拒绝 (｡•́︿•̀｡)</button>
+        </div>
+    </div>
+</div>
+
+<!-- 结果展示层 -->
+<div id="result-mask">
+    <div class="result-emoji" id="res-emoji">🌸</div>
+    <h1 id="res-text"></h1>
+    <p id="res-subtext"></p>
+    <div class="close-result" onclick="hideResult()">返回继续看照片</div>
+</div>
+
+<div id="lightbox" onclick="this.style.display='none'">
+    <img src="" id="zoom-target">
+</div>
+
+<script>
+    const storySteps = [
+        "其实，我喜欢你很久了。最初的时候，我对你只是有一点点好感...",
+        "你记得那天晚上吗？我们两个都是残血，我被诸葛亮的大招锁定了...",
+        "我以为会被你卖掉（毕竟习惯了哈哈），但你突然闪现上来帮我挡住了那一击。",
+        "那一刻，我发现自己真的好喜欢你。哪怕隔着屏幕，心跳声也清晰可见。",
+        "我不知道你是否能感受我的喜欢，我想要表现得明显却又害怕被发现而克制。",
+        "跟你在一起的每一个瞬间或许并不都是美好的，但我大多数时候都是开心的。",
+        "因为我喜欢你吖~",
+        "我把这些点点滴滴都记录了下来，下面是我收集的小小记忆..."
+    ];
+
+    let currentStory = 0;
+    const typewriterElement = document.getElementById('typewriter');
+    const bgImages = ['Figure1.jpg', 'Figure2.jpg', 'Figure3.jpg', 'Figure4.jpg', 'Figure5.jpg'];
+    const audio = document.getElementById('bgm');
+    const musicBtn = document.getElementById('music-btn');
+
+    function typeWriter(text, i, fnCallback) {
+        if (i < text.length) {
+            typewriterElement.innerHTML = text.substring(0, i+1) + '<span style="color:#d63384">|</span>';
+            setTimeout(() => typeWriter(text, i + 1, fnCallback), 60);
+        } else if (typeof fnCallback == 'function') {
+            setTimeout(fnCallback, 800);
+        }
+    }
+
+    function handleFlow() {
+        if (audio.paused) playMusic();
+        if (currentStory < storySteps.length) {
+            document.getElementById('stage1').style.backgroundImage = `linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url(${bgImages[currentStory % bgImages.length]})`;
+            typeWriter(storySteps[currentStory], 0, () => {
+                document.getElementById('nextBtn').innerText = currentStory === storySteps.length - 1 ? "查看记忆册" : "继续读下去";
+            });
+            currentStory++;
+        } else {
+            enterStage2();
+        }
+    }
+
+    function enterStage2() {
+        const s1 = document.getElementById('stage1');
+        s1.style.opacity = '0';
+        setTimeout(() => {
+            s1.style.display = 'none';
+            document.getElementById('stage2').style.display = 'block';
+            window.scrollTo(0, 0);
+            initPhotos();
+        }, 1500);
+    }
+
+    /* --- 新增：接受/拒绝逻辑 --- */
+    let rejectCount = 0;
+    const rejectTexts = ["(｡•́︿•̀｡) 真的吗？", "我会哭很久的...", "再给你一次机会嘛", "不可以点这个哦！", "求求你啦~"];
+    
+    function showReject() {
+        const yesBtn = document.getElementById('yes-btn');
+        const noBtn = document.getElementById('no-btn');
+        
+        // 拒绝后的逻辑：愿意按钮变大，拒绝按钮文字变
+        rejectCount++;
+        let fontSize = 1.2 + (rejectCount * 0.2); // 愿意按钮越来越大
+        yesBtn.style.transform = `scale(${1 + rejectCount*0.15})`;
+        
+        if(rejectCount < rejectTexts.length) {
+            noBtn.innerText = rejectTexts[rejectCount];
+        } else {
+            noBtn.innerText = "你不点愿意我不消失！哼";
+        }
+
+        // 展示伤心弹窗
+        document.getElementById('res-emoji').innerText = "😭";
+        document.getElementById('res-text').innerText = "心碎了一地...";
+        document.getElementById('res-subtext').innerText = "何苏桓，你真的忍心拒绝我吗？再考虑一下吧！";
+        document.getElementById('result-mask').style.display = 'flex';
+    }
+
+    function showAccept() {
+        // 展示开心弹窗
+        document.getElementById('res-emoji').innerText = "🥰";
+        document.getElementById('res-text').innerText = "太棒了！✨";
+        document.getElementById('res-subtext').innerText = "余生请多指教，我的男朋友何苏桓 ❤️";
+        document.getElementById('result-mask').style.display = 'flex';
+        
+        // 额外放飞一些爱心
+        for(let i=0; i<30; i++) setTimeout(createPetal, i*100);
+    }
+
+    function hideResult() {
+        document.getElementById('result-mask').style.display = 'none';
+    }
+
+    // 基础功能保持不变
+    function playMusic() { audio.play().then(() => musicBtn.classList.add('rotating')).catch(err => {}); }
+    function toggleMusic(e) { e.stopPropagation(); if (audio.paused) { audio.play(); musicBtn.classList.add('rotating'); } else { audio.pause(); musicBtn.classList.remove('rotating'); } }
+    function initPhotos() { const photos = document.querySelectorAll('.polaroid'); photos.forEach(photo => { const r = Math.floor(Math.random() * 12) - 6; photo.style.transform = `rotate(${r}deg)`; }); }
+    function zoomImg(el) { document.getElementById('zoom-target').src = el.querySelector('img').src; document.getElementById('lightbox').style.display = 'flex'; }
+    window.onload = () => { typeWriter(storySteps[0], 0, () => { currentStory = 1; }); };
+    function createPetal() {
+        const petal = document.createElement('div');
+        petal.classList.add('petal');
+        const items = ['🌸', '💖', '✨', '☁️', '🌹'];
+        petal.innerHTML = items[Math.floor(Math.random() * items.length)];
+        petal.style.left = Math.random() * 100 + 'vw';
+        petal.style.fontSize = (Math.random() * 20 + 20) + 'px';
+        petal.style.animationDuration = (Math.random() * 3 + 4) + 's';
+        document.body.appendChild(petal);
+        setTimeout(() => petal.remove(), 7000);
+    }
+    setInterval(createPetal, 500);
+</script>
+</body>
+</html>

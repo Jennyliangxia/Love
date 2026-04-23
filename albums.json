@@ -1,0 +1,110 @@
+{
+  "site": {
+    "title": "我的记忆相册",
+    "subtitle": "那些值得珍藏的每一个瞬间 ✨",
+    "passwordHash": "8d969eef6ecad3c29a3a629280e686cf0c3f5d5a86aff3ca12020c923adc6c92",
+    "_passwordNote": "默认密码: 123456 | 修改方法: 在浏览器控制台输入 hashPwd('你的新密码')，将返回的哈希值替换此处的 passwordHash"
+  },
+  "categories": [
+    { "id": "study",       "name": "学习存档", "icon": "📚", "color": "#4a6fa5", "bg": "#dce9f7" },
+    { "id": "daily",       "name": "生活日常", "icon": "☀️", "color": "#b8760a", "bg": "#fdf0d0" },
+    { "id": "travel",      "name": "旅途风景", "icon": "🗺️", "color": "#2e7d55", "bg": "#d4f0e2" },
+    { "id": "food",        "name": "美食合集", "icon": "🍜", "color": "#b04a1a", "bg": "#fde0cc" },
+    { "id": "friends",     "name": "亲友合照", "icon": "🤗", "color": "#8040a8", "bg": "#edddf5" },
+    { "id": "selfie",      "name": "自拍合集", "icon": "🤳", "color": "#c0185a", "bg": "#fce0ec" },
+    { "id": "sky",         "name": "天空万物", "icon": "🌤️", "color": "#1a70a8", "bg": "#d0eaf8" },
+    { "id": "screenshots", "name": "收藏截图", "icon": "📷", "color": "#5a48b0", "bg": "#e4e0f5" }
+  ],
+  "media": [
+    {
+      "id": 1,
+      "category": "daily",
+      "type": "photo",
+      "src": "Figure8.jpg",
+      "title": "生活瞬间",
+      "date": "2024-03-15",
+      "description": "日常的美好记录"
+    },
+    {
+      "id": 2,
+      "category": "travel",
+      "type": "photo",
+      "src": "Figure9.jpg",
+      "title": "旅途风景",
+      "date": "2024-04-20",
+      "description": ""
+    },
+    {
+      "id": 3,
+      "category": "food",
+      "type": "photo",
+      "src": "Figure10.jpg",
+      "title": "好吃的记录",
+      "date": "2024-05-10",
+      "description": ""
+    },
+    {
+      "id": 4,
+      "category": "friends",
+      "type": "photo",
+      "src": "Figure11.jpg",
+      "title": "和朋友的合照",
+      "date": "2024-06-01",
+      "description": ""
+    },
+    {
+      "id": 5,
+      "category": "selfie",
+      "type": "photo",
+      "src": "Figure12.jpg",
+      "title": "自拍记录",
+      "date": "2024-07-04",
+      "description": ""
+    },
+    {
+      "id": 6,
+      "category": "sky",
+      "type": "photo",
+      "src": "Figure13.jpg",
+      "title": "今天的天空",
+      "date": "2024-08-15",
+      "description": ""
+    },
+    {
+      "id": 7,
+      "category": "screenshots",
+      "type": "photo",
+      "src": "Figure14.jpg",
+      "title": "喜欢的截图",
+      "date": "2024-09-20",
+      "description": ""
+    },
+    {
+      "id": 8,
+      "category": "study",
+      "type": "photo",
+      "src": "Figure15.jpg",
+      "title": "学习记录",
+      "date": "2024-10-01",
+      "description": ""
+    },
+    {
+      "id": 9,
+      "category": "daily",
+      "type": "photo",
+      "src": "Figure16.jpg",
+      "title": "日常随拍",
+      "date": "2024-11-11",
+      "description": ""
+    },
+    {
+      "id": 10,
+      "category": "friends",
+      "type": "photo",
+      "src": "Figure17.jpg",
+      "title": "珍贵合影",
+      "date": "2024-12-25",
+      "description": ""
+    }
+  ]
+}

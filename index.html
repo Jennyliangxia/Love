@@ -2,323 +2,201 @@
 <html lang="zh-CN">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>送给何苏桓的专属记忆 ❤️</title>
+    <title>智领未来队 - 团队建设与管理规范方案</title>
     <style>
-        /* --- 基础样式变量 --- */
-        :root {
-            --primary-pink: #ffafbd;
-            --soft-pink: #ffc3a0;
-            --text-color: #5a4a4a;
-            --glass-bg: rgba(255, 255, 255, 0.85);
+        body {
+            font-family: 'PingFang SC', 'Microsoft YaHei', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 40px 20px;
+            background-color: #fff;
         }
-
-        body, html {
-            margin: 0; padding: 0; width: 100%; height: 100%;
-            font-family: "Microsoft YaHei", "STKaiti", serif;
-            background: #fdf5f5;
-            overflow-x: hidden;
-            scroll-behavior: smooth;
+        h1 {
+            text-align: center;
+            color: #1a365d;
+            font-size: 26px;
+            margin-bottom: 30px;
+            border-bottom: 2px solid #2b6cb0;
+            padding-bottom: 10px;
         }
-
-        /* --- 第一阶段：唯美文字开场 --- */
-        #stage1 {
-            position: fixed; top: 0; left: 0; width: 100%; height: 100%;
-            display: flex; justify-content: center; align-items: center;
-            background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('Figure1.jpg');
-            background-size: cover; background-position: center;
-            z-index: 100; transition: opacity 1.5s ease;
+        h2 {
+            color: #2b6cb0;
+            font-size: 18px;
+            border-left: 4px solid #2b6cb0;
+            padding-left: 10px;
+            margin-top: 30px;
+            margin-bottom: 15px;
         }
-
-        .glass-card {
-            background: var(--glass-bg);
-            backdrop-filter: blur(12px);
-            padding: 40px; border-radius: 30px;
-            max-width: 85%; width: 500px;
-            box-shadow: 0 20px 60px rgba(0,0,0,0.2);
-            text-align: center; border: 1px solid rgba(255,255,255,0.4);
+        .info-box {
+            background-color: #f7fafc;
+            border: 1px solid #e2e8f0;
+            border-radius: 6px;
+            padding: 15px 20px;
+            margin-bottom: 20px;
         }
-
-        #main-title { color: #d63384; margin-bottom: 25px; font-size: 1.6rem; }
-        
-        .typing-text {
-            font-size: 1.15rem; color: var(--text-color);
-            line-height: 1.8; min-height: 120px; margin-bottom: 25px;
-            text-align: left; position: relative;
+        .info-box p {
+            margin: 8px 0;
+            font-size: 15px;
         }
-
-        .action-btn {
-            background: linear-gradient(45deg, #ff758c, #ff7eb3);
-            color: white; border: none; padding: 14px 40px;
-            border-radius: 50px; cursor: pointer; font-size: 1rem;
-            transition: all 0.3s ease;
-            box-shadow: 0 8px 20px rgba(255, 117, 140, 0.4);
+        .info-box strong {
+            color: #4a5568;
         }
-        .action-btn:hover { transform: translateY(-3px); box-shadow: 0 12px 25px rgba(255, 117, 140, 0.5); }
-
-        /* --- 第二阶段：手账风照片墙 --- */
-        #stage2 {
-            display: none; min-height: 100vh;
-            background: #f7e8df url('https://www.transparenttextures.com/patterns/felt.png');
-            padding: 80px 20px;
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 15px;
+            margin-bottom: 25px;
+            font-size: 14px;
         }
-
-        .gallery-header { text-align: center; margin-bottom: 60px; }
-        .gallery-header h1 { font-family: "STKaiti"; color: #8e735b; font-size: 2.5rem; margin-bottom: 10px; }
-        .gallery-header p { color: #a68b75; font-size: 1.1rem; }
-
-        .photo-container {
-            position: relative; max-width: 1200px; margin: 0 auto;
-            display: flex; flex-wrap: wrap; justify-content: center; gap: 40px;
+        th {
+            background-color: #ebf8ff;
+            color: #2b6cb0;
+            font-weight: 600;
+            text-align: left;
+            padding: 12px;
+            border-bottom: 2px solid #bee3f8;
         }
-
-        .polaroid {
-            background: white; padding: 12px 12px 45px 12px;
-            box-shadow: 0 10px 25px rgba(0,0,0,0.15);
-            transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-            cursor: pointer; position: relative; width: 250px;
+        td {
+            padding: 12px;
+            border-bottom: 1px solid #e2e8f0;
+            color: #4a5568;
         }
-
-        .polaroid::before {
-            content: ""; position: absolute; top: -15px; left: 50%;
-            transform: translateX(-50%) rotate(-3deg);
-            width: 90px; height: 30px;
-            background: rgba(255, 255, 255, 0.4);
-            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
-            backdrop-filter: blur(2px); z-index: 2; border: 1px solid rgba(255,255,255,0.2);
+        tr:hover {
+            background-color: #f8fafc;
         }
-
-        .polaroid img { width: 100%; height: 320px; object-fit: cover; border: 1px solid #f0f0f0; }
-        .polaroid span {
-            display: block; text-align: center; margin-top: 18px;
-            font-family: "STKaiti"; font-size: 1.2rem; color: #777;
+        .rule-section {
+            margin-bottom: 20px;
         }
-
-        .polaroid:hover {
-            transform: scale(1.1) rotate(0deg) !important;
-            z-index: 50; box-shadow: 0 20px 45px rgba(0,0,0,0.3);
+        .rule-title {
+            font-weight: bold;
+            color: #2d3748;
+            margin-top: 15px;
+            margin-bottom: 8px;
+            font-size: 15px;
         }
-
-        /* --- 背景音乐控制按钮 --- */
-        #music-btn {
-            position: fixed; top: 25px; right: 25px; z-index: 1000;
-            width: 45px; height: 45px; background: rgba(255,255,255,0.6);
-            border-radius: 50%; display: flex; justify-content: center;
-            align-items: center; cursor: pointer; border: 2px solid white;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.1); font-size: 20px;
+        .rule-item {
+            margin-bottom: 12px;
+            padding-left: 15px;
         }
-        .rotating { animation: musicRotate 4s linear infinite; }
-        @keyframes musicRotate { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }
-
-        /* --- 结尾区域按钮样式 --- */
-        .final-message {
-            text-align: center; margin-top: 100px; padding: 80px 20px;
-            background: rgba(255,255,255,0.4); border-radius: 60px;
+        .rule-item-title {
+            font-weight: 600;
+            color: #4a5568;
+            display: inline-block;
+            margin-bottom: 4px;
         }
-        .final-message h2 { color: #d63384; font-size: 2.2rem; margin-bottom: 30px; }
-        
-        .answer-box {
-            display: flex; justify-content: center; gap: 30px; align-items: center;
+        .rule-item-content {
+            margin: 0;
+            color: #718096;
+            font-size: 14px;
+            padding-left: 20px;
         }
-        .ans-btn {
-            padding: 15px 45px; border-radius: 50px; border: none; cursor: pointer;
-            font-size: 1.2rem; transition: all 0.3s; font-family: "STKaiti";
-        }
-        #yes-btn { background: #ff758c; color: white; box-shadow: 0 5px 15px rgba(255,117,140,0.4); }
-        #no-btn { background: #eee; color: #999; }
-
-        /* --- 弹窗结果层 --- */
-        #result-mask {
-            position: fixed; top: 0; left: 0; width: 100%; height: 100%;
-            background: rgba(0,0,0,0.85); z-index: 3000;
-            display: none; flex-direction: column; justify-content: center; align-items: center;
-            color: white; text-align: center;
-        }
-        #result-mask h1 { font-size: 3rem; margin-top: 20px; font-family: "STKaiti"; }
-        .result-emoji { font-size: 80px; }
-        .close-result { margin-top: 30px; color: #ccc; cursor: pointer; text-decoration: underline; }
-
-        /* --- 图片放大层 --- */
-        #lightbox {
-            position: fixed; top: 0; left: 0; width: 100%; height: 100%;
-            background: rgba(0,0,0,0.92); z-index: 2000;
-            display: none; justify-content: center; align-items: center;
-        }
-        #lightbox img { max-width: 95%; max-height: 90%; border: 6px solid white; border-radius: 5px; }
-
-        /* --- 飘落动效 --- */
-        .petal {
-            position: fixed; top: -10%; z-index: 500; pointer-events: none;
-            animation: fall linear forwards;
-        }
-        @keyframes fall {
-            to { transform: translateY(110vh) translateX(120px) rotate(720deg); opacity: 0; }
+        @media print {
+            body { padding: 0; }
         }
     </style>
 </head>
 <body>
 
-<audio id="bgm" loop><source src="bgm.mp3" type="audio/mpeg"></audio>
-<div id="music-btn" onclick="toggleMusic(event)">🎵</div>
+    <h1>团队建设与管理规范方案 (A4)</h1>
 
-<div id="stage1">
-    <div class="glass-card">
-        <h1 id="main-title">何苏桓，我有话想对你说...</h1>
-        <div id="typewriter" class="typing-text"></div>
-        <button class="action-btn" id="nextBtn" onclick="handleFlow()">点击开启我们的故事</button>
+    <!-- 一、 团队基本信息 -->
+    <h2>一、 团队基本信息</h2>
+    <div class="info-box">
+        <p><strong>团队名称：</strong>智领未来队</p>
+        <p><strong>团队口号 / 愿景：</strong>用AI赋能现在，用智慧定义未来。</p>
     </div>
-</div>
 
-<div id="stage2">
-    <div class="gallery-header">
-        <h1>专属记忆册 ❤️</h1>
-        <p>每一页手账，都藏着我想对你说的话</p>
-    </div>
+    <!-- 二、 团队成员与分工 -->
+    <h2>二、 团队成员与分工（5人）</h2>
+    <table>
+        <thead>
+            <tr>
+                <th style="width: 20%;">姓名</th>
+                <th style="width: 25%;">团队角色</th>
+                <th style="width: 55%;">核心职责</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><strong>林星佑</strong></td>
+                <td>组长 (1人)</td>
+                <td>负责项目整体进度管理、任务分配、团队沟通协调以及最终成果的把控。</td>
+            </tr>
+            <tr>
+                <td><strong>任景逸</strong></td>
+                <td>技术支持 (1人)</td>
+                <td>负责AI工具与平台的筛选、提示词（Prompt）技术优化、解决团队技术卡点。</td>
+            </tr>
+            <tr>
+                <td><strong>贾露婷</strong></td>
+                <td>资料调研与核心内容</td>
+                <td>负责项目背景调研、数据收集，利用AI工具生成初版核心内容。</td>
+            </tr>
+            <tr>
+                <td><strong>向妍琳</strong></td>
+                <td>界面与视觉设计</td>
+                <td>负责项目排版、PPT制作或利用生成式AI进行图像/视觉效果的设计。</td>
+            </tr>
+            <tr>
+                <td><strong>陆奕舟</strong></td>
+                <td>测试与成果汇报</td>
+                <td>负责方案的可行性测试、模拟答辩以及汇报材料的最终整理。</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <!-- 三、 内部管理规则与团队约定 -->
+    <h2>三、 内部管理规则与团队约定</h2>
     
-    <div class="photo-container">
-        <div class="polaroid" onclick="zoomImg(this)"><img src="Figure8.jpg"><span>心动的话语</span></div>
-        <div class="polaroid" onclick="zoomImg(this)"><img src="Figure9.jpg"><span>完美配合！</span></div>
-        <div class="polaroid" onclick="zoomImg(this)"><img src="Figure10.jpg"><span>等我</span></div>
-        <div class="polaroid" onclick="zoomImg(this)"><img src="Figure11.jpg"><span>五排连胜战绩</span></div>
-        <div class="polaroid" onclick="zoomImg(this)"><img src="Figure12.jpg"><span>你居然想听我的真实声音</span></div>
-        <div class="polaroid" onclick="zoomImg(this)"><img src="Figure13.jpg"><span>我们的单挑</span></div>
-        <div class="polaroid" onclick="zoomImg(this)"><img src="Figure14.jpg"><span>开心❤️</span></div>
-        <div class="polaroid" onclick="zoomImg(this)"><img src="Figure15.jpg"><span>初识五排</span></div>
-        <div class="polaroid" onclick="zoomImg(this)"><img src="Figure16.jpg"><span>喜欢你是我的秘密</span></div>
-        <div class="polaroid" onclick="zoomImg(this)"><img src="Figure17.jpg"><span>林星佑 ❤️ 何苏桓</span></div>
-    </div>
-
-    <div class="final-message">
-        <h2 id="final-question">何苏桓，你愿意做我的男朋友吗？</h2>
-        <div class="answer-box">
-            <button class="ans-btn" id="yes-btn" onclick="showAccept()">我愿意 ❤️</button>
-            <button class="ans-btn" id="no-btn" onclick="showReject()">拒绝 (｡•́︿•̀｡)</button>
+    <div class="rule-section">
+        <div class="rule-title">1. 沟通与例会机制</div>
+        <div class="rule-item">
+            <span class="rule-item-title">● 官方沟通渠道</span>
+            <p class="rule-item-content">团队唯一指定工作群为群聊。群内发布的关键通知，成员须在 <strong>12小时内</strong> 回复“收到”。</p>
+        </div>
+        <div class="rule-item">
+            <span class="rule-item-title">● 进度同步会</span>
+            <p class="rule-item-content">每周固定时间召开 15 分钟的线上快速同步会（Sprint），精准汇报：“已完成、进行中、遇到的困难”。</p>
         </div>
     </div>
-</div>
 
-<!-- 结果展示层 -->
-<div id="result-mask">
-    <div class="result-emoji" id="res-emoji">🌸</div>
-    <h1 id="res-text"></h1>
-    <p id="res-subtext"></p>
-    <div class="close-result" onclick="hideResult()">返回继续看照片</div>
-</div>
+    <div class="rule-section">
+        <div class="rule-title">2. 进度与交付规则</div>
+        <div class="rule-item">
+            <span class="rule-item-title">● deadline 提前制</span>
+            <p class="rule-item-content">团队内部任务的交付时间必须比学校/老师要求的截止时间<strong>提前至少 24 小时</strong>，预留出集体审查和修改的时间。</p>
+        </div>
+        <div class="rule-item">
+            <span class="rule-item-title">● 主动求助原则</span>
+            <p class="rule-item-content">成员如因技术瓶颈或突发状况无法按时完成任务，须提前<strong>至少 12 小时</strong>向组长和技术支持说明，严禁临近截止日期“玩消失”。</p>
+        </div>
+    </div>
 
-<div id="lightbox" onclick="this.style.display='none'">
-    <img src="" id="zoom-target">
-</div>
+    <div class="rule-section">
+        <div class="rule-title">3. AI工具使用与成果规范</div>
+        <div class="rule-item">
+            <span class="rule-item-title">● 严禁盲目复制</span>
+            <p class="rule-item-content">所有由AI平台生成的内容，必须经过人工的“事实核查（Fact-check）”与“语言润色”，严禁直接复制粘贴AI造成的逻辑硬伤或虚假信息。</p>
+        </div>
+        <div class="rule-item">
+            <span class="rule-item-title">● 技术共享</span>
+            <p class="rule-item-content">技术支持研究出的高效提示词（Prompt）或新工具，须第一时间在群内分享，提升全组生产力。</p>
+        </div>
+    </div>
 
-<script>
-    const storySteps = [
-        "其实，我喜欢你很久了。最初的时候，我对你只是有一点点好感...",
-        "你记得那天晚上吗？我们两个都是残血，我被诸葛亮的大招锁定了...",
-        "我以为会被你卖掉（毕竟习惯了哈哈），但你突然闪现上来帮我挡住了那一击。",
-        "那一刻，我发现自己真的好喜欢你。哪怕隔着屏幕，心跳声也清晰可见。",
-        "我不知道你是否能感受我的喜欢，我想要表现得明显却又害怕被发现而克制。",
-        "跟你在一起的每一个瞬间或许并不都是美好的，但我大多数时候都是开心的。",
-        "因为我喜欢你吖~",
-        "我把这些点点滴滴都记录了下来，下面是我收集的小小记忆..."
-    ];
+    <div class="rule-section">
+        <div class="rule-title">4. 冲突解决与奖惩机制</div>
+        <div class="rule-item">
+            <span class="rule-item-title">● 民主集中制</span>
+            <p class="rule-item-content">方案方向出现分歧时，采用少数服从多数原则投票决定。若票数平收，由组长做出最终裁决。</p>
+        </div>
+        <div class="rule-item">
+            <span class="rule-item-title">● 违约责任</span>
+            <p class="rule-item-content">无故拖延内部交付、不参加团队会议且未提前请假者，累计满 2 次，组长有权在最终成果署名中注明贡献度，或上报指导老师调低其平时分。</p>
+        </div>
+    </div>
 
-    let currentStory = 0;
-    const typewriterElement = document.getElementById('typewriter');
-    const bgImages = ['Figure1.jpg', 'Figure2.jpg', 'Figure3.jpg', 'Figure4.jpg', 'Figure5.jpg'];
-    const audio = document.getElementById('bgm');
-    const musicBtn = document.getElementById('music-btn');
-
-    function typeWriter(text, i, fnCallback) {
-        if (i < text.length) {
-            typewriterElement.innerHTML = text.substring(0, i+1) + '<span style="color:#d63384">|</span>';
-            setTimeout(() => typeWriter(text, i + 1, fnCallback), 60);
-        } else if (typeof fnCallback == 'function') {
-            setTimeout(fnCallback, 800);
-        }
-    }
-
-    function handleFlow() {
-        if (audio.paused) playMusic();
-        if (currentStory < storySteps.length) {
-            document.getElementById('stage1').style.backgroundImage = `linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url(${bgImages[currentStory % bgImages.length]})`;
-            typeWriter(storySteps[currentStory], 0, () => {
-                document.getElementById('nextBtn').innerText = currentStory === storySteps.length - 1 ? "查看记忆册" : "继续读下去";
-            });
-            currentStory++;
-        } else {
-            enterStage2();
-        }
-    }
-
-    function enterStage2() {
-        const s1 = document.getElementById('stage1');
-        s1.style.opacity = '0';
-        setTimeout(() => {
-            s1.style.display = 'none';
-            document.getElementById('stage2').style.display = 'block';
-            window.scrollTo(0, 0);
-            initPhotos();
-        }, 1500);
-    }
-
-    /* --- 新增：接受/拒绝逻辑 --- */
-    let rejectCount = 0;
-    const rejectTexts = ["(｡•́︿•̀｡) 真的吗？", "我会哭很久的...", "再给你一次机会嘛", "不可以点这个哦！", "求求你啦~"];
-    
-    function showReject() {
-        const yesBtn = document.getElementById('yes-btn');
-        const noBtn = document.getElementById('no-btn');
-        
-        // 拒绝后的逻辑：愿意按钮变大，拒绝按钮文字变
-        rejectCount++;
-        let fontSize = 1.2 + (rejectCount * 0.2); // 愿意按钮越来越大
-        yesBtn.style.transform = `scale(${1 + rejectCount*0.15})`;
-        
-        if(rejectCount < rejectTexts.length) {
-            noBtn.innerText = rejectTexts[rejectCount];
-        } else {
-            noBtn.innerText = "你不点愿意我不消失！哼";
-        }
-
-        // 展示伤心弹窗
-        document.getElementById('res-emoji').innerText = "😭";
-        document.getElementById('res-text').innerText = "心碎了一地...";
-        document.getElementById('res-subtext').innerText = "何苏桓，你真的忍心拒绝我吗？再考虑一下吧！";
-        document.getElementById('result-mask').style.display = 'flex';
-    }
-
-    function showAccept() {
-        // 展示开心弹窗
-        document.getElementById('res-emoji').innerText = "🥰";
-        document.getElementById('res-text').innerText = "太棒了！✨";
-        document.getElementById('res-subtext').innerText = "余生请多指教，我的男朋友何苏桓 ❤️";
-        document.getElementById('result-mask').style.display = 'flex';
-        
-        // 额外放飞一些爱心
-        for(let i=0; i<30; i++) setTimeout(createPetal, i*100);
-    }
-
-    function hideResult() {
-        document.getElementById('result-mask').style.display = 'none';
-    }
-
-    // 基础功能保持不变
-    function playMusic() { audio.play().then(() => musicBtn.classList.add('rotating')).catch(err => {}); }
-    function toggleMusic(e) { e.stopPropagation(); if (audio.paused) { audio.play(); musicBtn.classList.add('rotating'); } else { audio.pause(); musicBtn.classList.remove('rotating'); } }
-    function initPhotos() { const photos = document.querySelectorAll('.polaroid'); photos.forEach(photo => { const r = Math.floor(Math.random() * 12) - 6; photo.style.transform = `rotate(${r}deg)`; }); }
-    function zoomImg(el) { document.getElementById('zoom-target').src = el.querySelector('img').src; document.getElementById('lightbox').style.display = 'flex'; }
-    window.onload = () => { typeWriter(storySteps[0], 0, () => { currentStory = 1; }); };
-    function createPetal() {
-        const petal = document.createElement('div');
-        petal.classList.add('petal');
-        const items = ['🌸', '💖', '✨', '☁️', '🌹'];
-        petal.innerHTML = items[Math.floor(Math.random() * items.length)];
-        petal.style.left = Math.random() * 100 + 'vw';
-        petal.style.fontSize = (Math.random() * 20 + 20) + 'px';
-        petal.style.animationDuration = (Math.random() * 3 + 4) + 's';
-        document.body.appendChild(petal);
-        setTimeout(() => petal.remove(), 7000);
-    }
-    setInterval(createPetal, 500);
-</script>
 </body>
 </html>
